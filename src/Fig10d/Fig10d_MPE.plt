@@ -38,13 +38,109 @@ set label 7 '1064 nm' at first 0.6, first 0.3 center front
 set label 8 '1315 nm' at first 20.0, first 0.4 center front
 set label 9 '1400 nm' at first 0.23, first 1.0 center front
 
-#plot 'Fig10d_therm.dat' notitle with lines linestyle 1, \
-#     'Fig10d_photo.dat' notitle with lines linestyle 2
+# MPE Data Blocks
+# Data in two coluns:  t(s);  MPE (W cm^-2)
 
-plot 'Fig10d_therm.dat' index 0:1 notitle with lines linestyle 1, \
-     'Fig10d_therm.dat' index 2 notitle with lines linestyle 5, \
-     'Fig10d_therm.dat' index 3:4 notitle with lines linestyle 1, \
-     'Fig10d_photo.dat' notitle with lines linestyle 2
+$MPE400_450_PHOTO << EOD
+1.9e+00   2.546e-02
+5.2e+02   9.503e-05
+3.0e+04   9.503e-05
+EOD
+
+$MPE475_PHOTO << EOD
+8.9e+00   1.734e-02
+5.2e+02   3.005e-04
+3.0e+04   3.005e-04
+EOD
+
+$MPE500_PHOTO << EOD
+3.3e+01   1.471e-02
+5.2e+02   9.503e-04
+3.0e+04   9.503e-04
+EOD
+
+$MPE532_PHOTO << EOD
+1.5e+02   1.471e-02
+5.2e+02   4.148e-03
+3.0e+04   4.148e-03
+EOD
+
+$MPE400_700_THERMO << EOD
+1.0e-01   5.335e-02
+1.7e+01   1.471e-02
+3.0e+04   1.471e-02
+EOD
+
+$MPE850 << EOD
+1.0e-01   1.064e-01
+2.5e-01   8.465e-02
+1.7e+01   2.934e-02
+3.0e+04   2.934e-02
+EOD
+
+$MPE1064 << EOD
+1.0e-01   2.667e-01
+2.5e-01   2.121e-01
+1.7e+01   7.353e-02
+3.0e+04   7.353e-02
+EOD
+
+$MPE1315 << EOD
+1.000e-01  2.339e+01
+1.446e-01  1.638e+01
+2.091e-01  1.149e+01
+3.024e-01  8.065e+00
+4.373e-01  5.669e+00
+6.325e-01  3.990e+00
+9.146e-01  2.812e+00
+1.323e+00  1.984e+00
+1.913e+00  1.402e+00
+2.766e+00  9.928e-01
+4.000e+00  7.060e-01
+1.000e+01  2.824e-01
+1.249e+01  2.824e-01
+3.000e+04  2.824e-01
+EOD
+
+$MPE1400 << EOD
+1.0e-01   5.149e+00
+2.5e-01   2.384e+00
+4.0e-01   1.613e+00
+6.0e-01   1.155e+00
+8.0e-01   9.120e-01
+1.0e+00   7.600e-01
+2.0e+00   4.330e-01
+3.0e+00   3.123e-01
+4.0e+00   2.500e-01
+5.0e+00   2.000e-01
+6.0e+00   1.667e-01
+7.0e+00   1.429e-01
+8.0e+00   1.250e-01
+9.0e+00   1.111e-01
+1.0e+01   1.000e-01
+2.0e+02   1.000e-01
+4.0e+02   1.000e-01
+6.0e+02   1.000e-01
+8.0e+02   1.000e-01
+1.0e+03   1.000e-01
+2.0e+03   1.000e-01
+4.0e+03   1.000e-01
+6.0e+03   1.000e-01
+8.0e+03   1.000e-01
+1.0e+04   1.000e-01
+2.0e+04   1.000e-01
+3.0e+04   1.000e-01
+EOD
+
+plot $MPE400_450_PHOTO  notitle with lines linestyle 1, \
+     $MPE475_PHOTO      notitle with lines linestyle 1, \
+     $MPE500_PHOTO      notitle with lines linestyle 1, \
+     $MPE532_PHOTO      notitle with lines linestyle 1, \
+     $MPE400_700_THERMO notitle with lines linestyle 1, \
+     $MPE850            notitle with lines linestyle 1, \
+     $MPE1064           notitle with lines linestyle 1, \
+     $MPE1315           notitle with lines linestyle 1, \
+     $MPE1400           notitle with lines linestyle 1
 
 unset label 1
 unset label 2
