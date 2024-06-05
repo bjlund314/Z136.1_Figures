@@ -7,8 +7,5 @@ FONT = Helvetica
 FONTSIZE = 10
 GNUPLOT_SCRIPT = Fig10e_MPE.plt
 
-datafiles = Fig10e_therm.dat \
-	    Fig10e_photo.dat
-
 include ../common.mk
 
