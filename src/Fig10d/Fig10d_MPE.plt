@@ -4,7 +4,7 @@
 #
 # Author: Brian J. Lund
 
-set xrange [0.1:1.0e+5]
+set xrange [0.1:5.0e5]
 set yrange [1.0e-5:100.0]
 set logscale xy
 
@@ -28,15 +28,15 @@ set ylabel 'Irradiance (W/cm^2)'
 set format x '10^{%L}'
 set format y '10^{%L}'
 
-set label 1 '400 - 450 nm' at first 3000.0, first 1.6e-4 center front
-set label 2 '475 nm' at first 3000.0, first 5.2e-4 center front
-set label 3 '500 nm' at first 3000.0, first 1.6e-3 center front
-set label 4 '532 nm' at first 3000.0, first 7.0e-3 center front
-set label 5 '400 - 700 nm' at first 3000.0, first 2.2e-2 center front
-set label 6 '850 nm' at first 3000.0, first 5.0e-2 center front
-set label 7 '1064 nm' at first 0.6, first 0.3 center front
-set label 8 '1315 nm' at first 20.0, first 0.4 center front
-set label 9 '1400 nm' at first 0.23, first 1.0 center front
+set label 1 '400 - 450 nm' at first 4.0e4, first 9.503e-5 left front
+set label 2 '475 nm' at first 4.0e4, first 3.005e-4 left front
+set label 3 '500 nm' at first 4.0e4, first 9.503e-4 left front
+set label 4 '532 nm' at first 4.0e4, first 4.148e-3 left front
+set label 5 '400 - 700 nm' at first 4.0e4, first 1.471e-2 left front
+set label 6 '850 nm' at first 4.0e4, first 2.934e-2 left front
+set label 7 '1064 nm' at first 4.0e4, first 7.0e-2 left front
+set label 8 '1315 nm' at first 4.0e4, first 2.842e-1 left front
+set label 9 '1400 nm' at first 4.0e4, first 0.12 left front
 
 # MPE Data Blocks
 # Data in two coluns:  t(s);  MPE (W cm^-2)

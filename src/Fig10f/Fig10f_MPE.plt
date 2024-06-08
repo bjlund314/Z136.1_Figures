@@ -6,7 +6,7 @@
 #
 # Author: Brian J. Lund
 
-set xrange [0.1:1.0e+5]
+set xrange [0.1:5.0e5]
 set yrange [1.0e-3:1.0e+4]
 set logscale xy
 
@@ -30,19 +30,20 @@ set ylabel 'Radiance (W/cm^2/sr)'
 set format x '10^{%L}'
 set format y '10^{%L}'
 
-set label 1 '400 - 450 nm' at first 3.0e+4, first 1.4e-2 center front
-set label 2 '475 nm' at first 3.0e+4, first 5.2e-2 center front
-set label 3 '500 nm' at first 3.0e+4, first 1.4e-1 center front
-set label 4 '532 nm' at first 3.0e+4, first 6.4e-1 center front
-set label 5 '550 nm' at first 3.0e+4, first 1.6 center front
-set label 6 '600 - 700 nm' at first 3.0e+4, first 3.8 center front
-set label 7 '850 nm' at first 0.3, first 8.0 center front
-set arrow 7 from first 0.3, first 10.0 to first 0.4, first 33.0 linestyle 1
-set label 8 '1064 nm' at first 3.0e+4, first 40.0 center front
-set label 9 '1315 nm' at first 2.0, first 600 center front
-set label 10 '1400 nm' at first 0.3, first 4.5e+3 center front
-set arrow 10 from first 0.3, first 3.0e+3 to first 0.2, first 440.0 \
-    linestyle 1
+set label 1 '400 - 450 nm' at first 4.0e4, first 1.000000e-02 left front
+set label 2 '475 nm' at first 4.0e4, first 3.162278e-02 left front
+set label 3 '500 nm' at first 4.0e4, first 1.000000e-01 left front
+set label 4 '532 nm' at first 4.0e4, first 4.365158e-01 left front
+set label 5 '550 nm' at first 4.0e4, first 1.000000e+00 left front
+set label 6 '600 - 700 nm' at first 4.0e4, first 4.831604e+00 left front
+set label 7 '850 nm' at first 4.0e4, first 8.3 left front
+set label 8 '1064 nm' at first 4.0e4, first 2.415802e+01 left front
+set label 9 '1315 nm' at first 4.0e4, first 4.0e1 left front
+set label 10 '1400 nm' at first 4.0e4, first 13.2 left front
+
+#set arrow 7 from first 0.3, first 10.0 to first 0.4, first 33.0 linestyle 1
+#set arrow 10 from first 0.3, first 3.0e+3 to first 0.2, first 440.0 \
+#    linestyle 1
 
 # MPE Data Blocks
 # Data in two columns:  t (s);  MPE (W cm^-2 sr^-1)

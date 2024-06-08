@@ -5,7 +5,7 @@
 # Author: Brian J. Lund
 #
 
-set xrange[0.1:1.0e+5]
+set xrange[0.1:5.0e5]
 set yrange[1.0e-5:100.0]
 set logscale xy
 
@@ -14,8 +14,8 @@ set style line 2 linetype 2 linewidth 2 linecolor rgb "black" dashtype 2
 set style line 3 linetype 1 linewidth 2 linecolor rgb "dark-gray"
 set style line 4 linetype 1 linewidth 1 linecolor rgb "dark-gray"
 
-set mytics 5
-set mxtics 5
+set mytics 10
+set mxtics 10
 set xtics 0.1, 10.0
 set ytics 1.0e-5, 10.0
 set grid xtics ytics
@@ -28,15 +28,15 @@ set ylabel 'Irradiance (W/cm^2)'
 set format x '10^{%L}'
 set format y '10^{%L}'
 
-set label 1 '400 - 450 nm' at first 1000.0, first 1.6e-4 center front
-set label 2 '475 nm' at first 1000.0, first 4.5e-4 center front
-set label 3 '500 nm' at first 1000.0, first 1.5e-3 center front
-set label 4 '514.5 nm' at first 1000.0, first 3.0e-3 center front
-set label 5 '850 nm' at first 1000.0, first 2.2e-2 center front
-set label 6 '1064 nm' at first 1000.0, first 5.8e-2 center front
-set label 7 '1315 nm' at first 14.0, first 0.6 center front
-set label 8 '1400 nm' at first 1.0, first 0.36 center front
-set label 9 '600 - 700 nm' at first 1000.0, first 1.0e-2 center front
+set label 1 '400 - 450 nm' at first 4.0e4, first 1.0e-4 left front
+set label 2 '475 nm' at first 4.0e4, first 3.162e-4 left front
+set label 3 '500 nm' at first 4.0e4, first 1.0e-3 left front
+set label 4 '514.5 nm' at first 4.0e4, first 1.950e-3 left front
+set label 5 '850 nm' at first 4.0e4, first 1.401e-2 left front
+set label 6 '1064 nm' at first 4.0e4, first 3.511e-2 left front
+set label 7 '1315 nm' at first 4.0e4, first 2.824e-1 left front
+set label 8 '1400 nm' at first 4.0e4, first 0.1 left front
+set label 9 '600 - 700 nm' at first 4.0e4, first 7.022e-3 left front
 
 # MPE Data Blocks
 # Data in two columns:  t (s);  MPE (W cm^-2)

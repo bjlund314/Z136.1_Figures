@@ -4,12 +4,12 @@
 #
 # Author: Brian J. Lund
 
-set xrange [0.1:1.0e+5]
+set xrange [0.1:5.0e5]
 set yrange [1.0e-5:100.0]
 set logscale xy
 
 set style line 1 linetype 1 linewidth 2 linecolor rgb "black"
-set style line 2 linetype 2 linewidth 2 linecolor rgb "black" dashtype 2
+set style line 2 linetype 2 linewidth 2 linecolor rgb "black" dashtype 4
 set style line 3 linetype 1 linewidth 2 linecolor rgb "dark-gray"
 set style line 4 linetype 1 linewidth 1 linecolor rgb "dark-gray"
 set style line 5 linetype 5 linewidth 2 linecolor rgb "black"
@@ -28,19 +28,16 @@ set ylabel 'Irradiance (W/cm^2)'
 set format x '10^{%L}'
 set format y ' 10^{%L}'
 
-set label 1 '400 - 450 nm' at first 1.0e+4, first 1.4e-4 center front
-set label 2 '475 nm' at first 1.0e+4, first 4.8e-4 center front
-set label 3 '500 nm' at first 1.0e+4, first 1.4e-3 center front
-set label 4 '532 nm' at first 1.0e+4, first 6.0e-3 center front
-set label 5 '550 nm' at first 1.0e+4, first 1.4e-2 center front
-set label 6 '400 - 700 nm' at first 1.0e+4, first 3.8e-2 center front
-set label 7 '850 nm' at first 0.2, first 0.02 left front
-set arrow 7 from first 0.36, first 0.027 to first 0.53, first 0.13 \
-     linestyle 1
-set label 8 '1064 nm' at first 1.0e+4, first 0.2 center front
-set label 9 '1315 nm' at first 4.0, first 2.0 center front
-set label 10 '1400 nm' at first 0.2, first 30 left front
-set arrow 10 from first 0.36, first 21.0 to first 0.2, first 3.1 linestyle 1
+set label 1 '400 - 450 nm' at first 4.0e4, first 9.503e-5 left front
+set label 2 '475 nm' at first 4.0e4, first 3.005e-4 left front
+set label 3 '500 nm' at first 4.0e4, first 9.503e-4 left front
+set label 4 '532 nm' at first 4.0e4, first 4.148e-03 left front
+set label 5 '550 nm' at first 4.0e4, first 9.503e-03 left front
+set label 6 '400 - 700 nm' at first 4.0e4, first 2.541e-02 left front
+set label 7 '850 nm' at first 4.0e4, first 5.071e-02 left front
+set label 8 '1064 nm' at first 4.0e4, first 1.5e-01 left front
+set label 9 '1315 nm' at first 4.0e4, first 2.824e-01 left front
+set label 10 '1400 nm' at first 4.0e4, first 9.5e-2 left front
 
 # MPE Data Blocks
 # Data in two columns:  t (s); MPE (W cm^-2)
@@ -152,7 +149,7 @@ plot $MPE400_450_PHOTO  notitle with lines linestyle 1, \
      $MPE850            notitle with lines linestyle 1, \
      $MPE1064           notitle with lines linestyle 1, \
      $MPE1315           notitle with lines linestyle 1, \
-     $MPE1400           notitle with lines linestyle 1
+     $MPE1400           notitle with lines linestyle 2
 
 unset label 1
 unset label 2
