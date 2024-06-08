@@ -10,8 +10,8 @@ set logscale xy
 
 set style line 1 linetype 1 linewidth 2 linecolor rgb "black"
 set style line 2 linetype 2 linewidth 2 linecolor rgb "black" dashtype 4
-set style line 3 linetype 1 linewidth 2 linecolor rgb "dark-gray"
-set style line 4 linetype 1 linewidth 1 linecolor rgb "dark-gray"
+set style line 3 linetype 1 linewidth 2 linecolor rgb "gray70"
+set style line 4 linetype 1 linewidth 1 linecolor rgb "gray70"
 set style line 5 linetype 5 linewidth 2 linecolor rgb "black"
 
 set mytics 10 
